@@ -1,5 +1,5 @@
 {% set name = "hysetter" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
-  sha256: a64901dbbcc8ba0c10150df0e8b218f43cad04f07d5c572b5df3e2919d06b0c3
+  sha256: 7973bf91601bf9f5f7e05f922ecbf7ec3639019b0cf74563ca570cd2110ae8a5
 
 build:
   entry_points:
