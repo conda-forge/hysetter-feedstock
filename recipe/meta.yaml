@@ -1,5 +1,5 @@
 {% set name = "hysetter" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
-  sha256: a64901dbbcc8ba0c10150df0e8b218f43cad04f07d5c572b5df3e2919d06b0c3
+  sha256: 7973bf91601bf9f5f7e05f922ecbf7ec3639019b0cf74563ca570cd2110ae8a5
 
 build:
   entry_points:
@@ -24,16 +24,19 @@ requirements:
     - pip
   run:
     - python >=3.10
+    - boto3
     - dask-expr >=1.1
     - flox
+    - geopandas-base
     - numba
     - numbagg
     - planetary-computer
     - py3dep >=0.16.3
+    - pyarrow >=1.0.1
     - py7zr
-    - pydantic
+    - pydantic >=2.7.1
     - pydaymet >=0.16.3
-    - pygeohydro >=0.16.3
+    - pygeohydro >=0.16.5
     - pygeoutils >=0.16.3
     - pygridmet >=0.16
     - pynhd >=0.16.3
@@ -41,8 +44,7 @@ requirements:
     - pyogrio
     - pystac-client
     - pyyaml
-    - rich-click
-    - rioxarray >=0.15.5
+    - rich-click >=1.8.2
     - typing-extensions
     - xarray-spatial
 
