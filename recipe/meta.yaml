@@ -24,16 +24,19 @@ requirements:
     - pip
   run:
     - python >=3.10
+    - boto3
     - dask-expr >=1.1
     - flox
+    - geopandas-base
     - numba
     - numbagg
     - planetary-computer
     - py3dep >=0.16.3
+    - pyarrow >=1.0.1
     - py7zr
-    - pydantic
+    - pydantic >=2.7.1
     - pydaymet >=0.16.3
-    - pygeohydro >=0.16.3
+    - pygeohydro >=0.16.5
     - pygeoutils >=0.16.3
     - pygridmet >=0.16
     - pynhd >=0.16.3
@@ -41,8 +44,7 @@ requirements:
     - pyogrio
     - pystac-client
     - pyyaml
-    - rich-click
-    - rioxarray >=0.15.5
+    - rich-click >=1.8.2
     - typing-extensions
     - xarray-spatial
 
