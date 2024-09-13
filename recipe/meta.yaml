@@ -1,5 +1,5 @@
 {% set name = "hysetter" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
-  sha256: 7973bf91601bf9f5f7e05f922ecbf7ec3639019b0cf74563ca570cd2110ae8a5
+  sha256: 4a93eed1d6405fcb77e99482fb24979355bd5c4c21f7881ed5dd12cfa2b49910
 
 build:
   entry_points:
@@ -19,8 +19,8 @@ build:
 requirements:
   host:
     - python >=3.10
-    - setuptools >=60
-    - setuptools-scm >=8
+    - hatchling >=1.12
+    - hatch-vcs
     - pip
   run:
     - python >=3.10
@@ -31,16 +31,16 @@ requirements:
     - numba
     - numbagg
     - planetary-computer
-    - py3dep >=0.16.3
+    - py3dep <0.18,>=0.17
     - pyarrow >=1.0.1
     - py7zr
     - pydantic >=2.7.1
-    - pydaymet >=0.16.3
-    - pygeohydro >=0.16.5
-    - pygeoutils >=0.16.3
-    - pygridmet >=0.16
-    - pynhd >=0.16.3
-    - pynldas2 >=0.16
+    - pydaymet <0.18,>=0.17
+    - pygeohydro <0.18,>=0.17
+    - pygeoutils <0.18,>=0.17
+    - pygridmet <0.18,>=0.17
+    - pynhd <0.18,>=0.17
+    - pynldas2 <0.18,>=0.17
     - pyogrio
     - pystac-client
     - pyyaml
@@ -62,6 +62,7 @@ about:
   home: https://github.com/hyriver/hysetter
   license: MIT
   license_file: LICENSE
+  doc_url: https://hysetter.readthedocs.io
 
 extra:
   recipe-maintainers:
