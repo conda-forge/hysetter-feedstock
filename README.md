@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: Subset hydroclimate data using HyRiver over CONUS.
 
+Documentation: https://hysetter.readthedocs.io
+
 Current build status
 ====================
 
