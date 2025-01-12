@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "hysetter" %}
 {% set version = "0.2.0" %}
 
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
   sha256: 4a93eed1d6405fcb77e99482fb24979355bd5c4c21f7881ed5dd12cfa2b49910
 
 build:
@@ -14,16 +15,16 @@ build:
     - hysetter = hysetter.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling >=1.12
     - hatch-vcs
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - boto3
     - dask-expr >=1.1
     - flox
@@ -56,6 +57,7 @@ test:
     - hysetter --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Subset hydroclimate data using HyRiver over CONUS.
