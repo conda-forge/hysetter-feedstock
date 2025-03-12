@@ -27,25 +27,21 @@ requirements:
     - python >={{ python_min }}
     - boto3
     - dask-expr >=1.1
-    - flox
     - geopandas-base
-    - numba
-    - numbagg
     - planetary-computer
-    - py3dep <0.18,>=0.17
     - pyarrow >=1.0.1
-    - py7zr
     - pydantic >=2.7.1
-    - pydaymet <0.18,>=0.17
-    - pygeohydro <0.18,>=0.17
-    - pygeoutils <0.18,>=0.17
-    - pygridmet <0.18,>=0.17
-    - pynhd <0.18,>=0.17
-    - pynldas2 <0.18,>=0.17
+    - pydaymet >=0.19,<0.20
+    - pygeohydro >=0.19,<0.20
+    - pygeoutils >=0.19,<0.20
+    - pygridmet >=0.19,<0.20
+    - pynhd >=0.19,<0.20
+    - pynldas2 >=0.19,<0.20
     - pyogrio
     - pystac-client
     - pyyaml
     - rich-click >=1.8.2
+    - seamless-3dep >=0.3
     - typing-extensions
     - xarray-spatial
 
