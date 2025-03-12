@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "hysetter" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
-  sha256: 4a93eed1d6405fcb77e99482fb24979355bd5c4c21f7881ed5dd12cfa2b49910
+  sha256: a660df2cd00b2f346cb3b189dcdd62c47a49f6d29ab11f5c2e2a05b38db3bba3
 
 build:
   entry_points:
     - hysetter = hysetter.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
