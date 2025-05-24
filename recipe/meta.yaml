@@ -27,15 +27,15 @@ requirements:
     - python >={{ python_min }}
     - boto3
     - dask-expr >=1.1
-    - geopandas-base
+    - geopandas-base >=1
     - planetary-computer
     - pyarrow >=1.0.1
     - pydantic >=2.7.1
-    - pydaymet >=0.19,<0.20
-    - pygeohydro >=0.19,<0.20
+    - pydaymet >=0.19.4,<0.20
+    - pygeohydro >=0.19.4,<0.20
     - pygeoutils >=0.19,<0.20
-    - pygridmet >=0.19,<0.20
-    - pynhd >=0.19,<0.20
+    - pygridmet >=0.19.4,<0.20
+    - pynhd >=0.19.4,<0.20
     - pynldas2 >=0.19,<0.20
     - pyogrio
     - pystac-client
