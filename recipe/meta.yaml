@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "hysetter" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
-  sha256: a660df2cd00b2f346cb3b189dcdd62c47a49f6d29ab11f5c2e2a05b38db3bba3
+  sha256: dee3e316253aca3d5b9af93a182680cbab24510dd6b6b31e1ce21130f69618f4
 
 build:
   entry_points:
@@ -27,15 +27,15 @@ requirements:
     - python >={{ python_min }}
     - boto3
     - dask-expr >=1.1
-    - geopandas-base
+    - geopandas-base >=1
     - planetary-computer
     - pyarrow >=1.0.1
     - pydantic >=2.7.1
-    - pydaymet >=0.19,<0.20
-    - pygeohydro >=0.19,<0.20
+    - pydaymet >=0.19.4,<0.20
+    - pygeohydro >=0.19.4,<0.20
     - pygeoutils >=0.19,<0.20
-    - pygridmet >=0.19,<0.20
-    - pynhd >=0.19,<0.20
+    - pygridmet >=0.19.4,<0.20
+    - pynhd >=0.19.4,<0.20
     - pynldas2 >=0.19,<0.20
     - pyogrio
     - pystac-client
