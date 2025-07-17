@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "hysetter" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hysetter-{{ version }}.tar.gz
-  sha256: c5909a286acca1b43c210f47935c03f40f6a92fe313565836050a0931aada0db
+  sha256: 26838f2501f8f478b872bec3dad04247c212f2a61e4c1c64ba1cb1532f880300
 
 build:
   entry_points:
@@ -28,6 +28,7 @@ requirements:
     - boto3
     - dask-expr >=1.1
     - geopandas-base >=1
+    - pandas >=2
     - planetary-computer
     - pyarrow >=1.0.1
     - pydantic >=2.7.1
